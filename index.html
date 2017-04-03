@@ -8,13 +8,29 @@
 </head>
 <body>
 
-<h1>Podaj miejsce</h1>
-<button id="search">Szukaj</button>
-<input id="city-name" type="text" />
-<h2></h2>
-<div id="cities">
-  
-</div>
+	<h1>Podaj miejsce</h1>
+	<button id="search">Szukaj</button>
+	<input id="city-name" type="text" />
+	<h2></h2>
+	  <div class="container">
+	  	<div class="row cities">
+	  		<div class="col-lg-12 cities" id="cities"></div>
+	  	</div>
+	  	<div class="row cities">
+	  		<div class="col-lg-4 cities"><p>Data</p></div>
+	  		<div class="col-lg-4 cities"><p>Temperatura</p></div>
+	  		<div class="col-lg-4 cities"><p>Prędkość wiatru</p></div>
+	  	</div>	
+	  	<div class="row weatherdata">
+	  		<div class="row">
+	  		<div class="col-lg-4" id="day"></div>
+	  		<div class="col-lg-4" id="temperature"></div>
+	  		<div class="col-lg-4" id="windspeed"></div>
+	  		</div>
+	  	</div>
+	  	
+	  </div>
+	
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

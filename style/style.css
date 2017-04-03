@@ -1,0 +1,41 @@
+body {
+	height: auto;
+}
+
+.weatherdata {
+	background-color: #ddd;
+	text-align: center;
+	font-size: 0px;
+	border: 1px solid black; 
+}
+
+.weatherdata p {
+	font-size: 20px;
+	margin: 0;
+	border: 1px solid black; 
+
+
+}
+
+.cities {
+	background-color: #355e8e;
+	font-size: 0px;
+	
+	
+}
+
+.cities p {
+	margin: 0;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+
+}
+
+.container {
+	display: none;
+}
+
+.row {
+	margin: 5px 0;
+}
