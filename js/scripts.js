@@ -7,9 +7,9 @@ $('#search').on('click', function() {
 
 function searchCities() {
 	var cityName = $('#city-name').val(),
-	appid = "&APPID=296f7a5708ace85d40abe8fe971314b8",
-	units = "&units=metric",
-	language = "&lang=pl";
+	    appid = "&APPID=296f7a5708ace85d40abe8fe971314b8",
+	    units = "&units=metric",
+	    language = "&lang=pl";
 
 
 	$.ajax({
@@ -18,16 +18,28 @@ function searchCities() {
   		success: showCityWeather
   	});
 
-  	$('.container').css('display', 'block');
+    $('.container').show();
 }
 
-function showCityWeather (resp) {
+function showCityWeather(resp) {
+    var result = '';
 
 	$('#cities').append('<p>' + resp.city.name + '</p>');
 
-		for (var i = 0; i < 40; i++) {
-		$('#day').append('<p>' + resp.list[i].dt_txt + ':</p>');
-		$('#temperature').append('<p>' + resp.list[i].main.temp + ' &degC</p>');
-		$('#windspeed').append('<p>' + resp.list[i].wind.speed + ' km/h</p>');
+	for (var i = 0; i < 40; i++) {
+	   result += ' \
+        <div class="row"> \
+            <div class="col-lg-4"> \
+                <p>' + resp.list[i].dt_txt + ' </p> \
+            </div> \
+            <div class="col-lg-4"> \
+                <p>' + resp.list[i].main.temp + ' &degC</p> \
+            </div> \
+            <div class="col-lg-4"> \
+                <p>' + resp.list[i].wind.speed + ' km/h</p> \
+            </div> \
+        </div>';
 	}
+
+    $('#weather-result').append(result);
 }
